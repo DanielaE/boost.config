@@ -15,7 +15,6 @@ namespace boost_has_tr1_shared_ptr{
 
 int test()
 {
-   int i;
    std::tr1::shared_ptr<int> r(new int());
    (void)r;
    return 0;
