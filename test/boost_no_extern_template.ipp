@@ -10,6 +10,11 @@
 //  TITLE:         C++0x extern template unavailable
 //  DESCRIPTION:   The compiler does not support C++0x extern template
 
+#if defined(_MSC_VER)
+# pragma warning(push)
+# pragma warning(disable: 4231) // nonstandard extension used : 'extern' before template explicit instantiation
+#endif
+
 namespace boost_no_cxx11_extern_template {
 
 template<class T, class U> void f(T const* p, U const* q)
@@ -39,3 +44,7 @@ int test()
 }
 
 }
+
+#if defined(_MSC_VER)
+# pragma warning(pop)
+#endif
