@@ -131,12 +131,14 @@
 // to ensure the correct libraries are selected at link time.
 // #define BOOST_LIB_BUILDID amd64
 
-+#ifndef _WIN32_WINNT
-+#define _WIN32_WINNT 0x0601
-+#endif
+#ifndef _WIN32_WINNT
+#define _WIN32_WINNT 0x0601
+#endif
  
-+#ifndef WINVER
-+#define WINVER _WIN32_WINNT
-+#endif
+#ifndef WINVER
+#define WINVER _WIN32_WINNT
+#endif
  
-+#define BOOST_LOG_USE_WINNT6_API 
+#define BOOST_LOG_USE_WINNT6_API 
+#define BOOST_LOG_USE_COMPILER_TLS
+#define BOOST_LOG_WITHOUT_DEFAULT_FACTORIES
