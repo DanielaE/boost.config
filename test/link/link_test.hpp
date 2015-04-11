@@ -10,6 +10,11 @@
 
 #include <boost/config.hpp>
 
+#if defined(_MSC_VER)
+# pragma warning(push)
+# pragma warning(disable: 4231) // nonstandard extension used : 'extern' before template explicit instantiation
+#endif
+
 //
 // set up code to determine our compilers options, 
 // we will check that these are the same in the
@@ -102,6 +107,10 @@ extern template BOOST_SYMBOL_IMPORT int tester<int>::test();
 #endif
 
 #endif // BOOST_NO_CXX11_EXTERN_TEMPLATE
+
+#if defined(_MSC_VER)
+# pragma warning(pop)
+#endif
 
 #endif // BOOST_LINK_TEST_HPP
 

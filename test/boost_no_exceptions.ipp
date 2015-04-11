@@ -10,6 +10,10 @@
 //  DESCRIPTION:   The compiler in its current translation mode supports
 //                 exception handling.
 
+#if defined(_MSC_VER)
+# pragma warning(push)
+# pragma warning(disable: 4702) // unreachable code
+#endif
 
 namespace boost_no_exceptions{
 
@@ -37,7 +41,6 @@ int test()
 
 }
 
-
-
-
-
+#if defined(_MSC_VER)
+# pragma warning(pop)
+#endif
