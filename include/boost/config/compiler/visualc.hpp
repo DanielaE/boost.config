@@ -180,6 +180,7 @@
 #  define BOOST_NO_CXX14_BINARY_LITERALS
 #  define BOOST_NO_CXX14_GENERIC_LAMBDAS
 #  define BOOST_NO_CXX14_DIGIT_SEPARATORS
+#  define BOOST_NO_CXX11_THREAD_LOCAL
 #endif
 // C++11 features supported by VC++ 14 update 3 (aka 2015)
 //
