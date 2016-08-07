@@ -74,7 +74,7 @@ parser_buf<charT, traits>::seekoff(off_type off, ::std::ios_base::seekdir way, :
       if((newpos < 0) || (newpos > size))
          return pos_type(off_type(-1));
       else
-         this->setg(g, g + newpos, g + size);
+         this->setg(g, g + off_type(newpos), g + size);
    }
    }
    return static_cast<pos_type>(this->gptr() - this->eback());
