@@ -13,9 +13,6 @@
 
 namespace boost_has_tr1_unordered_set{
 
-using std::tr1::unordered_set;
-using std::tr1::unordered_multiset;
-
 int test()
 {
    return 0;
