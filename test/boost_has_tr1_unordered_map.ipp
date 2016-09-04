@@ -13,9 +13,6 @@
 
 namespace boost_has_tr1_unordered_map{
 
-using std::tr1::unordered_map;
-using std::tr1::unordered_multimap;
-
 int test()
 {
    return 0;
