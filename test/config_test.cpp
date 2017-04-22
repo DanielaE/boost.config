@@ -20,6 +20,10 @@
 #include <iostream>
 #include "test.hpp"
 
+#if _MSC_FULL_VER <= 191125507
+#define BOOST_NO_CXX14_CONSTEXPR
+#endif
+
 int error_count = 0;
 
 #ifndef BOOST_NO_ADL_BARRIER
