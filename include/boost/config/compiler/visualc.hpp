@@ -238,7 +238,6 @@
 #endif
 #if (_MSC_VER < 1915) || (_MSVC_LANG < 201402)
 // C++ 14:
-// Still gives internal compiler error for msvc-15.5:
 #  define BOOST_NO_CXX14_CONSTEXPR
 #endif
 // C++ 17:
@@ -346,8 +345,8 @@
 #include <boost/config/pragma_message.hpp>
 
 //
-// last known and checked version is 19.12.25830.2 (VC++ 2017.3):
-#if (_MSC_VER > 1912)
+// last known and checked version is 19.15.26729 (VC++ 2017.8):
+#if (_MSC_VER > 1915)
 #  if defined(BOOST_ASSERT_CONFIG)
 #     error "Boost.Config is older than your current compiler version."
 #  elif !defined(BOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE)
