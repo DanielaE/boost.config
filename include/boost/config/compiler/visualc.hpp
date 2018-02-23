@@ -235,7 +235,9 @@
 #endif
 // C++ 14:
 // Still gives internal compiler error for msvc-15.5:
+#if (_MSC_VER < 1912)
 #  define BOOST_NO_CXX14_CONSTEXPR
+#endif
 // C++ 17:
 #if (_MSC_VER < 1912) || (_MSVC_LANG < 201703)
 #define BOOST_NO_CXX17_INLINE_VARIABLES
